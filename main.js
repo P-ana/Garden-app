@@ -45,7 +45,7 @@ $(document).ready(function () {
     
     // Determine which plot to add the selected plant to
     let targetPlot="";
-    if (["🍆", "🫑", "🥒", "🥔"].includes(selectedValue)) {
+    if (["🍆", "🫑", "🥒", "🥔","🍅"].includes(selectedValue)) {
             targetPlot = "#one";
     } else if (selectedValue === "🥦") {
             targetPlot = "#two";
@@ -114,7 +114,7 @@ $(document).ready(function () {
         // Loop through the plants and append them to the corresponding plot
         garden.plants.forEach(function(plant) {
             // Append plant to the appropriate plot based on its emoji or name
-        if (["🍆", "🫑", "🥒", "🥔"].includes(plant)) {
+        if (["🍆", "🫑", "🥒", "🥔","🍅"].includes(plant)) {
                 $("#first").append(`<span class="plant-item">${plant}</span>`);
         } else if (plant === "🥦") {
                 $("#second").append(`<span class="plant-item">${plant}</span>`);
