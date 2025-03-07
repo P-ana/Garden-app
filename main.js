@@ -31,10 +31,13 @@ $(document).ready(function () {
     $("#gardenTitle").text(`🌿 Welcome to ${gardenName2} garden!`);
     $("#gardenInfo").text(`Surface Area: ${gardenSurface2} m²`);
 
+    const MAX_PLANTS_PER_PLOT=35;
+
     $("#addPlant").click(function () {
     let selectedOption=$("#plant option:selected");// Get selected option
     let selectedValue = selectedOption.val(); 
     let info = $("#info");
+    
 
     if(selectedValue === ""){
         info.text("Please, choose a plant");
@@ -42,7 +45,7 @@ $(document).ready(function () {
     
     // Determine which plot to add the selected plant to
     let targetPlot="";
-    if (["🍆", "🫑 ", "🥒", "🥔"].includes(selectedValue)) {
+    if (["🍆", "🫑", "🥒", "🥔"].includes(selectedValue)) {
             targetPlot = "#one";
     } else if (selectedValue === "🥦") {
             targetPlot = "#two";
@@ -54,7 +57,16 @@ $(document).ready(function () {
     else {
         info.text("This type of plant is not supported in this garden");
         return;
-    }    
+    } 
+    
+    // Check if the plot is already full
+    if($(targetPlot).children(".plant-item").length >MAX_PLANTS_PER_PLOT){
+        info.text("This is maximum number of plant");
+       $("#gardenTitle").text("");
+        $("#gardenInfo").text("");
+        return; 
+    } 
+    
     // Append selected plant to the correct plot
     $(targetPlot).append(`<span class="plant-item">${selectedValue} </span>`);
     info.text(""); // Clear error message if selection is valid
@@ -102,7 +114,7 @@ $(document).ready(function () {
         // Loop through the plants and append them to the corresponding plot
         garden.plants.forEach(function(plant) {
             // Append plant to the appropriate plot based on its emoji or name
-        if (["🍆", "🫑 ", "🥒", "🥔"].includes(plant)) {
+        if (["🍆", "🫑", "🥒", "🥔"].includes(plant)) {
                 $("#first").append(`<span class="plant-item">${plant}</span>`);
         } else if (plant === "🥦") {
                 $("#second").append(`<span class="plant-item">${plant}</span>`);
@@ -117,5 +129,21 @@ $(document).ready(function () {
         $("#finish").text("No plants have been added to your garden yet.").css({"color":"#F6D96E","font-size":"1rem","font-weight": "bold"});
     }
 });
+
+//Start again
+
+$(document).ready(function () {
+    if (window.location.pathname.includes("third.html")) { // Only run on third.html
+        $(document).on("keypress", function(event) {
+            if (event.key.toLowerCase() === "a") {  // Check if 'A' is pressed
+                localStorage.clear();
+                window.location.href = "index.html"; // Redirect to start
+            }
+        });
+    }
+});
+
+    
+   
 
 
