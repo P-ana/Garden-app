@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!--Container-->
+    <div class="container">
+        <div class="title"> 
+            <p style="font-style: italic;">Choose the plants you want to cultivate. </p><br>
+            <p id="gardenTitle"></p>
+            <p id="gardenInfo"></p>
+            <p id="info"></p>
+        </div>
+        <!--Selection-->
+        <div class="mb-3">
+            <label for="plant" class="form-label name">Plant name: </label>
+            <select id="plant" class="form-select">
+                <option value="">Select plant  </option>
+                <option value="🍆">Eggplant🍆 </option>
+                <option value="🫑">Pepper🫑 </option>
+                <option value="🥒">Cucumber🥒 </option>
+                <option value="🥬">Spinach🥬 </option>
+                <option value="🥦">Broccoli🥦 </option>
+                <option value="🥕">Carrots🥕 </option>
+                <option value="🧅">Onion🧅 </option>
+                <option value="🥔">Potato🥔</option>
+                <option value="🫛">Peas🫛</option>
+                <option value="🫘">Beans🫘</option>
+            </select>
+            <button  id="addPlant"    type="button" class="btn btn-primary">Add plant</button>
+        </div>
+        <!--Selection END-->
+        <!--Garden Plots-->
+            <div class="wrapper">
+                <div class="order">Garden plot 1  </div>
+                <div  class="plots"   id="one"></div>
+            </div>
+            <div class="wrapper">
+                <div class="order">Garden plot 2 </div>
+                <div class="plots"      id="two"></div>
+            </div>
+            <div class="wrapper"> 
+                <div class="order">Garden plot  3</div>
+                <div  class="plots"     id="three"></div>
+            </div>
+            <div class="wrapper">
+                <div class="order">Garden plot  4</div>
+                <div  class="plots"      id="four"></div>
+            </div>
+         <!--Garden Plots END-->
+           <button  id="createGarden"    type="submit" class="btn btn-primary">Create a garden  </button>
+    </div>
+    <!--Container END-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

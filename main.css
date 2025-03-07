@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./img/dad8ee9d-4eca-475e-8047-2c9de3fc2cf4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin: 0;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.container{
+    max-width:450px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #481936e6;
+    max-height: fit-content;
+    text-align: center;
+}
+
+.mb-3{
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    color:#DD215D;
+}
+
+#btn,#createGarden{
+    background-color:#CFDC2F;
+    color:white;
+    border: none;
+    text-align: center;
+    padding: 5px 10px;
+    translate: background-color 2s ease-in-out;
+    margin-top: 20px;
+}
+
+
+#btn:hover,#createGarden:hover{
+    background-color:hsl(65, 71%, 52%,0.8);
+}
+
+#btn:focus,#createGarden:focus{
+    background-color:#ccda34;
+    box-shadow: 0 0 5px 2px hsl(0, 0%, 100%,0.3);
+}
+#error,#info{
+    color: #F6D96E;
+    font-weight: bold;
+}
+
+.name{
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+#plant{
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.order{
+    font-size: 1.1rem;
+    color:#DD215D;
+
+}
+
+#addPlant{
+   padding: 2px 20px; 
+   color: white;
+   font-size: 0.8rem;
+   text-align: center;
+   background-color: #5b133fe6;
+   border: none;
+   box-shadow: 0 0 5px 1px hsl(0, 0%, 100%,0.3);
+   cursor: pointer;
+}
+
+#addPlant:active{
+    background-color: #851d5de6;
+}
+
+#addPlant:hover{
+    background-color: #851d5de6;
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.plots {
+    min-height: 50px;
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: hsl(65, 71%, 52%);
+
+}
+
+.title p{
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 1rem;
+}
+
+/*Third page*/
+
+/* General Garden Container */
+.garden-container {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: white;
+    background-image: url(./img/soil.png); /* Ensure the path to your image is correct */
+    background-origin: padding-box;
+    background-position: top left; /* Set the position for the background image */
+    background-repeat: repeat;
+    background-size: auto;
+    overflow: hidden;
+    width: 70%; /* Makes it responsive to screen width */
+    height:80vh;
+    border-radius: 4px; /* Optional: To give rounded corners to the container */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: To add a shadow effect */
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.plot {
+    border: 20px solid transparent;
+    border-image-source: url(./img/border.png);
+    border-image-slice: 10 10 ; /* Select the first slice of the border image */
+    border-image-repeat:repeat;
+    border-width: 10px;
+    min-height: 50px;
+    overflow: visible;
+}
+
+
+.plot-title{
+    color: hsl(65, 71%, 52%);
+}
+.vegis{
+    text-align: left;
+}
+.plant-item {
+    display: inline-block; /* Ensure items are visible */
+    font-size: 30px; /* Adjust text size */
+    margin: 5px; /* Add spacing */
+
+}
+
+#finish{
+        position: absolute;
+        top: 3%;
+        font-size: 2rem;
+        color:#ebebeb;
+        font-weight: bold;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .garden-container {
+        width: 80%; /* Ensure it takes up full width on smaller screens */
+        height: auto; /* Adjust height accordingly */
+        padding: 10px; /* Add padding for smaller screens */
+
+    }
+}
+
+
+
+
+
