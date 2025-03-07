@@ -171,7 +171,7 @@ h1{
     border-image-repeat:repeat;
     border-width: 10px;
     min-height: 50px;
-    max-height: fit-content;
+    max-height: auto;
     overflow: visible;
 }
 
